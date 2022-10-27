@@ -17,7 +17,10 @@ function App() {
       </header>
       <main className='main-section' role={"main"}>
         <Links twitter="Twitter" team="Zuri Team" book1="Zuri Books" python="Python Books" coders="Background Check for Coders" book2="Zuri Books" />
-
+        <div class="social-media-container">
+          
+          
+        </div>
       </main>
       <footer>
         <div>
