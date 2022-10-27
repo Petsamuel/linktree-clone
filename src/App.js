@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile_image from './profile__img.png';
+import Links from './components/links'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="profile__img" id="profile__img">
+          <img src={Profile_image} alt="Profile_image" />
+        </div>
+        <div className="profile_name">
+          <p>Annette Black</p>
+        </div>
+
       </header>
+      <main className='main-section' role={"main"}>
+        <Links twitter="Twitter" team="Zuri Team" book1="Zuri Books" python="Python Books" coders="Background Check for Coders" book2="Zuri Books" />
+
+      </main>
+      <footer>
+        <div>
+
+        </div>
+      </footer>
     </div>
   );
 }
