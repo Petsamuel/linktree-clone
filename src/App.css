@@ -114,6 +114,8 @@ main{
 display:flex;
 justify-content: space-between;
 gap:3%;
+
+
 }
 .slack_name>p{
   visibility: hidden;
@@ -156,6 +158,9 @@ gap:3%;
       display:flex;
       justify-content: space-between;
       flex-direction: column;
+      align-self: flex-start;
+      align-items: self-start;
+      padding-left:3.5em;
         
       }
      
@@ -163,7 +168,7 @@ gap:3%;
           padding:52px 0px;
       }
       .share-content, .share-content:hover{
-        content:url("./mobile-share.png");
+        content:url("./mobile.png");
         position: absolute;
         width: 40px;
         height: 40px;
