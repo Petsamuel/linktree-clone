@@ -6,7 +6,7 @@ import github from "./github.png";
 function Links(props) {
   return (
     <>
-      <a href="https://www.twitter.com/bieefilled" className="links">
+      <a href="https://www.twitter.com/bieefilled" className="links" id="twitter">
         <span>{props.twitter}</span>
       </a>
       <a className="links" href="https://training.zuri.team/" id="btn_zuri">
