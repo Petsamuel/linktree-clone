@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import zuri_png from "./Zuri.Internship_Logo.png"
-import ingressive_png from "./I4G.png"
+import zuri_png from "../assets/Zuri.Internship_Logo.png"
+import ingressive_png from "../assets/I4G.png"
 function Footer() {
     return (
         <>

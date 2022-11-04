@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import slack from "./slack.png";
-import github from "./github.png";
+import slack from "../assets/slack.png";
+import github from "../assets/github.png";
 
 function Links(props) {
   return (
