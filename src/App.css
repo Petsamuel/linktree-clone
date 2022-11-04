@@ -44,6 +44,127 @@ margin-top:24px;
 box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #EBE9FE;
 border-radius: 8px;
 }
+.contact-container{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align:initial;
+  
+}
+.contact-title{
+  width: 448px;
+height: 44px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+letter-spacing: -0.02em;
+color: #101828;
+
+}
+
+.contact-intro{
+  width: 720px;
+height: 30px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+color: #475467;
+padding-top:20px;
+padding-bottom:74px;
+}
+.contact-form{
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+  margin:6px 0px;
+}
+.input-wrapper{
+  display:flex;
+  flex-direction: column;
+}
+.input-field{
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 14px;
+gap: 8px;
+
+width: 100%;
+height: 44px;
+color:gray;
+border: 1px solid #D0D5DD;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+.form-name-field{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap:1em;
+}
+.col-3{
+  width:100%;
+  margin:1em 0em;
+}
+
+textarea{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px 14px;
+gap: 8px;
+width: 720px;
+height: 132px;
+background: #FFFFFF;
+border: 1px solid #D0D5DD;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+font-family: "inter";
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #667085;
+}
+.form-footer-text>p{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #475467;
+margin-top:24px;
+
+}
+.form-footer-text{
+  /* width:100%; */
+  text-align:center;
+
+}
+.form-footer-text>input{
+  width:100%;
+  padding: 12px 20px;
+gap: 8px;
+width: 720px;
+height: 48px;
+background: #1570EF;
+border: 1px solid #1570EF;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+text-align:center;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+margin:32px 0px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -115,6 +236,8 @@ main{
 display:flex;
 justify-content: space-between;
 gap:3%;
+border-top: 1px solid gray;
+padding-top:2.5em;
 
 
 }

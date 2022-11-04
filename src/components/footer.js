@@ -5,11 +5,12 @@ import ingressive_png from "./I4G.png"
 function Footer() {
     return (
         <>
+       
             <div className="footer-container">
                 <div className="zuri-logo">
                     <img src={zuri_png} alt="zuri-logo"/>
                 </div>
-                <div class="footer-text">
+                <div className="footer-text">
                     <Link to=""><p>Hng Internship Frontend Task</p></Link>
                 </div>
                 <div className="ingressive-for-good">
