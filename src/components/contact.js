@@ -32,7 +32,7 @@ function Contact() {
 
   return (
     <React.Fragment>
-      <div className="App">
+      {/* <div className="App"> */}
         <section className="contact-container">
           <div className="contact-inner-container">
             <div className="contact-title">Contact Me</div>
@@ -91,7 +91,7 @@ function Contact() {
           </div>
         </section>
         <Footer />
-      </div>
+      {/* </div>ss */}
     </React.Fragment>
   );
 }
