@@ -6,28 +6,46 @@ import { useState } from "react";
 function Contact() {
   const message_placeholder =
     "Send me a message and I'll reply you as soon as possible...";
-  let error_message = document.querySelector(".error-message");
-  let contact_form = document.querySelector(".email-form-message");
+    const error_message= document.querySelector(".error-message")
+     
   const [Form_Message, set_Form_Message] = useState("");
-  const [form_error, set_form_error] = useState(true)
+  const [form_error, set_form_error] = useState(true);
+  const [First_name, set_First_name]= useState("");
+  const [Last_name, set_Last_name]= useState("");
+  const [form_error_textarea, set_form_error_textarea]= useState(true);
 
   const status = "Please enter a message";
  
-   function successMessage(){
-    alert("sent"); 
- };
+
   function err_Respond (){
-    //  error_message.innerText = status;
-      set_form_error(false)
+      set_form_error(false);
+      set_form_error_textarea(true)
   };
  
   function Validate() {
-    Form_Message.length === 0 ? err_Respond() : successMessage();
-  }
+    if((Form_Message.length === 0) &&(First_name.length === 0) && (Last_name.length === 0)){
+      err_Respond()
+    }
+    else if(Form_Message.length === 0 ){
+        error_message.innerText = status;
+        set_form_error_textarea(false)
+    }
+    else{
+      alert("sent")
+      
+    }
 
+  }
+  function lastName(e){
+    set_Last_name(e.target.value)
+  }
+  function firstName(e){
+    set_First_name(e.target.value)
+  }
   function FormValue(e) {
+    set_form_error_textarea(true)
     set_Form_Message(e.target.value);
-    set_form_error(true)
+    error_message.innerText = " ";
     
   }
 
@@ -44,16 +62,16 @@ function Contact() {
             <div className="form-container">
               <div className="form-name-field">
                 <div className="input-wrapper">
-                  <label htmlFor="name" className="contact-form">
+                  <label htmlFor="name" className="contact-form" >
                     First Name
                   </label>
-                  <input id="name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} />
+                  <input id="name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName}/>
                 </div>
                 <div className="input-wrapper">
                   <label htmlFor="lastname" className="contact-form">
                     Last Name
                   </label>
-                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="lastname" />
+                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="lastname" value={Last_name} onChange={lastName}/>
                 </div>
               </div>
               <div className="input-wrapper col-3">
@@ -72,8 +90,8 @@ function Contact() {
                   Message
                 </label>
                 <textarea
-                  typeof="text"
-                  className={form_error ? "email-form-message": "contact-fom-error "}
+                
+                  className={form_error_textarea ? "email-form-message": "contact-fom-error "}
                   placeholder={message_placeholder}
                   value={Form_Message}
                   onChange={FormValue}
@@ -83,7 +101,7 @@ function Contact() {
               <span className="radio_button">
                 <input type="checkbox" id="" /> &nbsp;
                 <span>
-                  You agree to providing your data to name who may contact you.
+                  You agree to providing your data to {First_name} who may contact you.
                 </span>
               </span>
             </div>
