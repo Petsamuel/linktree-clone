@@ -295,7 +295,7 @@ main {
 
 .footer-container {
   margin: 3% 3% 0% 3%;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   gap: 3%;
@@ -353,7 +353,7 @@ main {
     flex-direction: column;
     align-self: flex-start;
     align-items: self-start;
-    padding-left: 3.5em;
+    /* padding-left: 3.5em; */
 
   }
 
@@ -376,7 +376,7 @@ main {
   flex-direction: column;
   align-self: flex-start;
   align-items: self-start;
-  padding-left: 3.5em;
+
 }
 
 .form-name-field{
