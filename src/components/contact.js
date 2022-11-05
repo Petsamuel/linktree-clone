@@ -62,16 +62,16 @@ function Contact() {
             <div className="form-container">
               <div className="form-name-field">
                 <div className="input-wrapper">
-                  <label htmlFor="name" className="contact-form" >
+                  <label htmlFor="first_name" className="contact-form" >
                     First Name
                   </label>
-                  <input id="name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName}/>
+                  <input id="first_name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName}/>
                 </div>
                 <div className="input-wrapper">
-                  <label htmlFor="lastname" className="contact-form">
+                  <label htmlFor="last_name" className="contact-form">
                     Last Name
                   </label>
-                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="lastname" value={Last_name} onChange={lastName}/>
+                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="last_name" value={Last_name} onChange={lastName}/>
                 </div>
               </div>
               <div className="input-wrapper col-3">
@@ -90,11 +90,13 @@ function Contact() {
                   Message
                 </label>
                 <textarea
-                
+                  id="message"
                   className={form_error_textarea ? "email-form-message": "contact-fom-error "}
                   placeholder={message_placeholder}
                   value={Form_Message}
                   onChange={FormValue}
+
+                  
                 ></textarea>
                 <div className="error-message"></div>
               </div>
@@ -106,7 +108,7 @@ function Contact() {
               </span>
             </div>
             <div className="form-footer-text">
-              <input type="button" value="Send message" onClick={Validate} />
+              <input type="button" value="Send message" onClick={Validate} id="btn__submit"/>
             </div>
           </div>
           </div>
