@@ -9,20 +9,25 @@ function Contact() {
   let error_message = document.querySelector(".error-message");
   let contact_form = document.querySelector(".email-form-message");
   const [Form_Message, set_Form_Message] = useState("");
-  // const noMessage = Form_Message === "" || Form_Message.length === 0;
   const status = "Please enter a message";
-
-  const err_Respond = () => {
-    return contact_form.classList.add("contact-fom-error");
+   function successMessage(){
+    alert("sent");
+    contact_form.target.value =""
+    
+ };
+  function err_Respond (){
+     contact_form.classList.add("contact-fom-error");
+     error_message.innerText = status
   };
+ 
   function Validate() {
-    Form_Message.length <= 0 ? err_Respond() : alert("sent");
+    Form_Message.length <= 0 ? err_Respond() : successMessage();
   }
 
   function FormValue(e) {
     set_Form_Message(e.target.value);
-    error_message.innerHTML = " ";
     contact_form.classList.remove("contact-fom-error");
+     error_message.innerText = ""
   }
 
   return (
@@ -71,10 +76,10 @@ function Contact() {
                   value={Form_Message}
                   onChange={FormValue}
                 ></textarea>
-                <div className="error-message">{status}</div>
+                <div className="error-message"></div>
               </div>
               <span className="radio_button">
-                <input type="checkbox" id="" /> &nbsp;{" "}
+                <input type="checkbox" id="" /> &nbsp;
                 <span>
                   You agree to providing your data to name who may contact you.
                 </span>
