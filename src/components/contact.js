@@ -6,24 +6,23 @@ import { useState } from "react";
 function Contact() {
   const message_placeholder =
     "Send me a message and I'll reply you as soon as possible...";
-  var error_message = document.querySelector(".error-message");
-  var contact_form = document.querySelector(".email-form-message");
+  let error_message = document.querySelector(".error-message");
+  let contact_form = document.querySelector(".email-form-message");
   const [Form_Message, set_Form_Message] = useState("");
-  const noMessage = Form_Message === "" || Form_Message.length === 0;
+  // const noMessage = Form_Message === "" || Form_Message.length === 0;
+  const status = "Please enter a message";
 
+  const err_Respond = () => {
+    return contact_form.classList.add("contact-fom-error");
+  };
   function Validate() {
-    noMessage ? err_Respond(): alert("sent");
-  }
-  function err_Respond(){
-    (error_message.innerHTML = "Please enter a message");
-      contact_form.classList.add("contact-fom-error");
+    Form_Message.length <= 0 ? err_Respond() : alert("sent");
   }
 
   function FormValue(e) {
     set_Form_Message(e.target.value);
-    error_message.innerHTML = "";
+    error_message.innerHTML = " ";
     contact_form.classList.remove("contact-fom-error");
-
   }
 
   return (
@@ -54,10 +53,15 @@ function Contact() {
                 <label htmlFor="email" className="contact-form">
                   Email
                 </label>
-                <input type="email" className="input-field" id="email" placeholder="yourname@email.com"/>
+                <input
+                  type="email"
+                  className="input-field"
+                  id="email"
+                  placeholder="yourname@email.com"
+                />
               </div>
               <div className="input-wrapper col-3">
-                <label htmlFor="email" class="contact-form">
+                <label htmlFor="email" className="contact-form">
                   Message
                 </label>
                 <textarea
@@ -67,11 +71,13 @@ function Contact() {
                   value={Form_Message}
                   onChange={FormValue}
                 ></textarea>
-                <div className="error-message"></div>
+                <div className="error-message">{status}</div>
               </div>
               <span className="radio_button">
-                <input type="checkbox" id="" /> &nbsp; <span>You agree to providing your
-                data to name who may contact you.</span>
+                <input type="checkbox" id="" /> &nbsp;{" "}
+                <span>
+                  You agree to providing your data to name who may contact you.
+                </span>
               </span>
             </div>
             <div className="form-footer-text">
