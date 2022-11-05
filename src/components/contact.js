@@ -10,14 +10,15 @@ function Contact() {
   let contact_form = document.querySelector(".email-form-message");
   const [Form_Message, set_Form_Message] = useState("");
   const status = "Please enter a message";
+
    function successMessage(){
     alert("sent");
-    contact_form.target.value =""
+    contact_form.target.value =" "
     
  };
   function err_Respond (){
      contact_form.classList.add("contact-fom-error");
-     error_message.innerText = status
+     error_message.innerText = status;
   };
  
   function Validate() {
@@ -32,12 +33,13 @@ function Contact() {
 
   return (
     <React.Fragment>
-      {/* <div className="App"> */}
         <section className="contact-container">
+          <div>
           <div className="contact-inner-container">
+            <div>
             <div className="contact-title">Contact Me</div>
-            <div className="contact-intro">
-              Hi there, contact me to ask me about anything you have in mind.
+            <p className="contact-intro">
+             Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
             <div className="form-container">
               <div className="form-name-field">
@@ -89,9 +91,10 @@ function Contact() {
               <input type="button" value="Send message" onClick={Validate} />
             </div>
           </div>
+          </div>
         </section>
         <Footer />
-      {/* </div>ss */}
+      
     </React.Fragment>
   );
 }
