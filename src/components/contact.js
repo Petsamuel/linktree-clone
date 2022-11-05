@@ -9,26 +9,26 @@ function Contact() {
   let error_message = document.querySelector(".error-message");
   let contact_form = document.querySelector(".email-form-message");
   const [Form_Message, set_Form_Message] = useState("");
-  const status = "Please enter a message";
+  const [form_error, set_form_error] = useState(true)
 
+  const status = "Please enter a message";
+ 
    function successMessage(){
-    alert("sent");
-    contact_form.target.value =" "
-    
+    alert("sent"); 
  };
   function err_Respond (){
-     contact_form.classList.add("contact-fom-error");
-     error_message.innerText = status;
+    //  error_message.innerText = status;
+      set_form_error(false)
   };
  
   function Validate() {
-    Form_Message.length <= 0 ? err_Respond() : successMessage();
+    Form_Message.length === 0 ? err_Respond() : successMessage();
   }
 
   function FormValue(e) {
     set_Form_Message(e.target.value);
-    contact_form.classList.remove("contact-fom-error");
-     error_message.innerText = ""
+    set_form_error(true)
+    
   }
 
   return (
@@ -47,13 +47,13 @@ function Contact() {
                   <label htmlFor="name" className="contact-form">
                     First Name
                   </label>
-                  <input id="name" type="text" className="input-field" />
+                  <input id="name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} />
                 </div>
                 <div className="input-wrapper">
                   <label htmlFor="lastname" className="contact-form">
                     Last Name
                   </label>
-                  <input type="text" className="input-field" id="lastname" />
+                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="lastname" />
                 </div>
               </div>
               <div className="input-wrapper col-3">
@@ -62,7 +62,7 @@ function Contact() {
                 </label>
                 <input
                   type="email"
-                  className="input-field"
+                  className={form_error ? "email-form-message input-field": "contact-fom-error "}
                   id="email"
                   placeholder="yourname@email.com"
                 />
@@ -73,7 +73,7 @@ function Contact() {
                 </label>
                 <textarea
                   typeof="text"
-                  className="email-form-message"
+                  className={form_error ? "email-form-message": "contact-fom-error "}
                   placeholder={message_placeholder}
                   value={Form_Message}
                   onChange={FormValue}
