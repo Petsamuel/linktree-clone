@@ -70,8 +70,8 @@ function Contact() {
                 <div className="error-message"></div>
               </div>
               <span className="radio_button">
-                <input type="radio" id="" /> &nbsp; You agree to providing your
-                data to name who may contact you.
+                <input type="checkbox" id="" /> &nbsp; <span>You agree to providing your
+                data to name who may contact you.</span>
               </span>
             </div>
             <div className="form-footer-text">
