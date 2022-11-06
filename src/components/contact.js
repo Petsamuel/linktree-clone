@@ -109,7 +109,7 @@ function Contact() {
                 {form_error_textarea ? null : <div className="error-message">Please enter a message</div>} 
               </div>
               <span className="radio_button">
-                <input type="checkbox" id="" /> &nbsp;
+                <input type="checkbox" id="checkbox" /> &nbsp;
                 <span>
                   You agree to providing your data to Peter Samuel who may contact you.
                 </span>

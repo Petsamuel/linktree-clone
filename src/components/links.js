@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import slack from "../assets/slack.png";
 import github from "../assets/github.png";
 
@@ -28,14 +27,13 @@ function Links(props) {
       >
         <span>{props.book2}</span>
       </a>
-      <Link
-        to ="/contact"
+      <a
         className="links"
-        id="pitch"
-        
+        id="contact"
+        href="/contact"
       >
         <span>{props.contact}</span>
-      </Link>
+      </a>
       <div className="social-media-container">
         <a href="https://">
           <img src={slack} alt="slack-icon" id="book_design" />
