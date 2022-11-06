@@ -70,13 +70,13 @@ function Contact() {
                   <label htmlFor="first_name" className="contact-form" >
                     First Name
                   </label>
-                  <input id="first_name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName}/>
+                  <input id="first_name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName} placeholder="Enter your First name"/>
                 </div>
                 <div className="input-wrapper">
                   <label htmlFor="last_name" className="contact-form">
                     Last Name
                   </label>
-                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="last_name" value={Last_name} onChange={lastName}/>
+                  <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="last_name" value={Last_name} onChange={lastName} placeholder="Enter your Last name"/>
                 </div>
               </div>
               <div className="input-wrapper col-3">
