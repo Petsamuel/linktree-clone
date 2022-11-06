@@ -70,20 +70,20 @@ function Contact() {
             <div className="form-container">
               <div className="form-name-field">
                 <div className="input-wrapper">
-                  <label htmlFor="first_name" className="contact-form" >
+                  <label for="first_name" className="contact-form" >
                     First Name
                   </label>
                   <input id="first_name" type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "}  value={First_name}  onChange={firstName} placeholder="Enter your First name"/>
                 </div>
                 <div className="input-wrapper">
-                  <label htmlFor="last_name" className="contact-form">
+                  <label for="last_name" className="contact-form">
                     Last Name
                   </label>
                   <input type="text" className={form_error ? "email-form-message input-field": "contact-fom-error "} id="last_name" value={Last_name} onChange={lastName} placeholder="Enter your Last name"/>
                 </div>
               </div>
               <div className="input-wrapper col-3">
-                <label htmlFor="email" className="contact-form">
+                <label for="email" className="contact-form">
                   Email
                 </label>
                 <input
@@ -94,7 +94,7 @@ function Contact() {
                 />
               </div>
               <div className="input-wrapper col-3">
-                <label htmlFor="email" className="contact-form">
+                <label for="email" className="contact-form">
                   Message
                 </label>
                 <textarea
@@ -110,9 +110,9 @@ function Contact() {
               </div>
               <span className="radio_button">
                 <input type="checkbox" id="checkbox" /> &nbsp;
-                <span>
+                <label for="checkbox">
                   You agree to providing your data to Peter Samuel who may contact you.
-                </span>
+                </label>
               </span>
             </div>
             <div className="form-footer-text">
