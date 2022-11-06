@@ -35,9 +35,12 @@ function Contact() {
       
         set_form_error_textarea(false)
     }
-    else{
+    else if(!(Form_Message.length === 0) && !(First_name.length === 0) && !(Last_name.length === 0)){
       alert("sent")
       
+    }
+    else{
+      err_Respond();
     }
 
   }
