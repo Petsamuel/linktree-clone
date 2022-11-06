@@ -25,6 +25,9 @@ function Contact() {
   function Validate() {
     if((Form_Message.length === 0) &&(First_name.length === 0) && (Last_name.length === 0)){
       err_Respond()
+      set_form_error_textarea(false)
+      // error_message.innerText = status;
+
     }
     else if(Form_Message.length === 0 ){
         error_message.innerText = status;
@@ -44,7 +47,9 @@ function Contact() {
   }
   function FormValue(e) {
     set_form_error_textarea(true)
+    set_form_error(true);
     set_Form_Message(e.target.value);
+    
     error_message.innerText = " ";
     
   }

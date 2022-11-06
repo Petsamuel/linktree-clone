@@ -369,8 +369,7 @@ main {
   }
 
 .contact-inner-container{
-  margin:1em auto;
-  /* width:85%; */
+  margin:2em;
   display:flex;
   justify-content: center;
   flex-direction: column;
