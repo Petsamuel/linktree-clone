@@ -29,7 +29,7 @@ function Links(props) {
         <span>{props.book2}</span>
       </a>
       <Link
-        to ="contact"
+        to ="/contact"
         className="links"
         id="pitch"
         

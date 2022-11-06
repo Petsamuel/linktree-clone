@@ -52,7 +52,6 @@ function Contact() {
   return (
     <React.Fragment>
         <section className="contact-container">
-          <div>
           <div className="contact-inner-container">
             <div>
             <div className="contact-title">Contact Me</div>
@@ -111,7 +110,7 @@ function Contact() {
               <input type="button" value="Send message" onClick={Validate} id="btn__submit"/>
             </div>
           </div>
-          </div>
+
         </section>
         <Footer />
       
