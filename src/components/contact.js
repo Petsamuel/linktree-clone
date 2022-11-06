@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import Footer from "./footer";
 import { useState } from "react";
+import { renderToString } from 'react-dom/server';
 
 function Contact() {
   const message_placeholder =
@@ -14,8 +15,8 @@ function Contact() {
   const [Last_name, set_Last_name]= useState("");
   const [form_error_textarea, set_form_error_textarea]= useState(true);
 
-  const status = "Please enter a message";
- 
+  
+
 
   function err_Respond (){
       set_form_error(false);
@@ -25,13 +26,13 @@ function Contact() {
   function Validate() {
     if((Form_Message.length === 0) &&(First_name.length === 0) && (Last_name.length === 0)){
       err_Respond();
-      error_message.innerText = status;
+      
       set_form_error_textarea(false)
       
 
     }
     else if(Form_Message.length === 0 ){
-        error_message.innerText = status;
+      
         set_form_error_textarea(false)
     }
     else{
@@ -50,7 +51,7 @@ function Contact() {
     set_form_error_textarea(true)
     set_form_error(true);
     set_Form_Message(e.target.value);
-    error_message.innerText ="";
+ 
     
   }
 
@@ -102,7 +103,7 @@ function Contact() {
 
                   
                 ></textarea>
-                <div className="error-message"></div>
+                {form_error_textarea ? null : <div className="error-message">Please enter a message</div>} 
               </div>
               <span className="radio_button">
                 <input type="checkbox" id="" /> &nbsp;
