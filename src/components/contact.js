@@ -24,9 +24,10 @@ function Contact() {
  
   function Validate() {
     if((Form_Message.length === 0) &&(First_name.length === 0) && (Last_name.length === 0)){
-      err_Respond()
+      err_Respond();
+      error_message.innerText = status;
       set_form_error_textarea(false)
-      // error_message.innerText = status;
+      
 
     }
     else if(Form_Message.length === 0 ){
@@ -49,8 +50,7 @@ function Contact() {
     set_form_error_textarea(true)
     set_form_error(true);
     set_Form_Message(e.target.value);
-    
-    error_message.innerText = " ";
+    error_message.innerText ="";
     
   }
 
@@ -107,7 +107,7 @@ function Contact() {
               <span className="radio_button">
                 <input type="checkbox" id="" /> &nbsp;
                 <span>
-                  You agree to providing your data to {First_name} who may contact you.
+                  You agree to providing your data to Peter Samuel who may contact you.
                 </span>
               </span>
             </div>

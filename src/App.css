@@ -403,15 +403,20 @@ textarea{
   border: 1px solid #D0D5DD;
 box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 border-radius: 8px;
+font-size: 16px;
 }
 .radio_button>span {
-  width: 100%;
 height: 48px;
   word-break: keep-all;
   font-weight: 400;
 font-size: 16px;
 line-height: 24px;
-padding-right:5px;
+padding-right:8px;
+}
+.radio_button{
+  display:flex;
+  gap:5px;
+  align-items: center;
 
 }
 .form-footer-text>input {
